@@ -15,16 +15,21 @@ public class SmsSender {
 	public static final String ACCOUNT_SID = "AC32cfd63ef917f6e483d9fea7782d5eaa";
 	public static final String AUTH_TOKEN = "bbdb1c780650dba0352e7d8106ad02e0";
 
-	public static void main(String[] args) throws TwilioRestException {
+	//public static void main(String[] args) throws TwilioRestException {
+		public  void sendMessage(String toNumber, String bodyMessage) throws TwilioRestException {
 		TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
 		// Build the parameters
 		List params = new ArrayList();
 
-		params.add(new BasicNameValuePair("To", "9552277877"));
-		params.add(new BasicNameValuePair("From", "9552277877"));
-		params.add(new BasicNameValuePair("Body",
-				"Finally got message from Twilio"));
+		/*params.add(new BasicNameValuePair("To", "+919552277877"));
+		
+		params.add(new BasicNameValuePair("Body","Finally got message from Twilio"));
+		*/
+		params.add(new BasicNameValuePair("To", toNumber));
+		params.add(new BasicNameValuePair("From", "+13343848249"));
+		params.add(new BasicNameValuePair("Body",bodyMessage));
+
 
 		MessageFactory messageFactory = client.getAccount().getMessageFactory();
 		Message message = messageFactory.create(params);
