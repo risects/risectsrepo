@@ -11,11 +11,10 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 public class RestClientCaller {
 	
-	public String callRestUrl(String suffixUri) {
+	public String callRestUrl(String url) {
 		String output = null;
 		try {
 
-			String url = "https://api108448live.gateway.akana.com/" + suffixUri;
 
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpGet getRequest = new HttpGet(url);
@@ -31,11 +30,11 @@ public class RestClientCaller {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					(response.getEntity().getContent())));
 
-			
+			StringBuilder sb =  new StringBuilder();
 			while ((output = br.readLine()) != null) {
-				System.out.println(output);
+				sb = sb.append(output);
 			}
-
+			output =  sb.toString();
 			httpClient.getConnectionManager().shutdown();
 
 		} catch (ClientProtocolException e) {

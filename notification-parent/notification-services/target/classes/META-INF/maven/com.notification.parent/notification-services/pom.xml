@@ -6,5 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>notification-services</artifactId>
-  
+  <dependencies>
+   <dependency>
+    <groupId>com.notification.parent</groupId>
+     <artifactId>notification-common</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    </dependencies>
 </project>

@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.notification.model.BankDetail;
 
 @Service("bankService")
-@Transactional
+
 public class BankService {
 
 	public List<BankDetail> findAllBanks() {
