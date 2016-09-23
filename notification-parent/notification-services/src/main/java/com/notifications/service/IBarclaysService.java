@@ -8,5 +8,6 @@ public interface IBarclaysService {
 	
 	public String getTransactions();
 	
+	
 
 }

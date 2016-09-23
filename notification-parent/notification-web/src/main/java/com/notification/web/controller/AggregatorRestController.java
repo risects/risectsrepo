@@ -22,7 +22,7 @@ public class AggregatorRestController {
  
     //-------------------Retrieve All Bank details of given user--------------------------------------------------------
      
-    @RequestMapping(value="/getBankDetails" ,method = RequestMethod.GET)
+    @RequestMapping(value="/BankDetails" ,method = RequestMethod.GET)
     @ResponseBody
     public String listAllBanks() {
     	String response = null;
