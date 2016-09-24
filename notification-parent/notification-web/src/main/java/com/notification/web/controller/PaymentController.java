@@ -12,16 +12,14 @@ import com.notification.utility.RestClientCaller;
 public class PaymentController {
 
 	
-		@RequestMapping(value="/payMerchant/{fromAccountNumber}/{amountValue}/{toAccountNumber}/{amountDirection}",method = RequestMethod.POST)
+		@RequestMapping(value="/payMerchant/{fromAccountNumber}/{amountValue}/{toAccountNumber}/{amountDirection}",method = RequestMethod.GET)
 		@ResponseBody
 		public String payTransactions (@PathVariable("fromAccountNumber") String fromAccountNumber,
 									   @PathVariable("amountValue") String amountValue,
 									   @PathVariable("amountDirection") String amountDirection,
 									   @PathVariable("toAccountNumber") String toAccountNumber){
-		String response = "Thank you for using our service. " + "\n"
-				+ "Your Transaction Ref number is 8573315966758940.";
-		new RestClientCaller().postCall(fromAccountNumber, toAccountNumber ,amountDirection, amountValue);
-			return response;
+		
+			return  new RestClientCaller().postCall(fromAccountNumber, toAccountNumber ,amountDirection, amountValue);
 		} 
 	
 

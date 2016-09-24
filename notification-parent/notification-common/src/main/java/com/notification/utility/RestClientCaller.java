@@ -3,6 +3,7 @@ package com.notification.utility;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.UUID;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -63,40 +64,43 @@ public class RestClientCaller {
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpPost postRequest = new HttpPost(url);
 			
+			Payment paymentRequest =  new Payment();
+			
 			Amount amount = new Amount();
 			amount.setDirection(amountDirection);
 			amount.setValue(amountValue);
 			
-			PaymentDescriptor paymentDescriptor = new PaymentDescriptor();
-			paymentDescriptor.setId(toAccountNumber);
-			paymentDescriptor.setPaymentDescriptorType("INDIVIDUAL");
+			paymentRequest.setAmount(amount);
 			
+			paymentRequest.setDescription("From account number" + fromAccountNumber);
+			
+			PaymentDescriptor paymentDescriptor = new PaymentDescriptor();
+			paymentDescriptor.setPaymentDescriptorType("INDIVIDUAL");
+			paymentDescriptor.setId(toAccountNumber);
+			
+			paymentRequest.setPaymentDescriptor(paymentDescriptor);
+		
 			Metadata metaData1 = new Metadata();
 			
 			metaData1.setKey("RECEIPT");
 			metaData1.setValue("https://upload.wikimedia.org/wikipedia/common");
 			
-			
 			Metadata[] metaData = {metaData1};
 			
-			Payment paymentRequest =  new Payment();
-			
-			paymentRequest.setAmount(amount);
-			paymentRequest.setDescription("From account number" + fromAccountNumber);
-			paymentRequest.setPaymentDescriptor(paymentDescriptor);
 			paymentRequest.setMetadata(metaData);
+
 			String[] tags = {"RETAIL"};
 			
 			paymentRequest.setTags(tags );
 			
 			paymentRequest.setNotes("null");
 			paymentRequest.setPaymentMethod("CARD");
-			System.out.println(MessageHelper.toJsonString(paymentRequest));
+			
+			//System.out.println(MessageHelper.toJsonString(paymentRequest));
 			StringEntity input = new StringEntity(MessageHelper.toJsonString(paymentRequest));
 			postRequest.setEntity(input);
 			postRequest.addHeader("accept", "application/json");
 			HttpResponse response = httpClient.execute(postRequest);
-			System.out.println(response);
 			
 		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
@@ -105,7 +109,7 @@ public class RestClientCaller {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "";
+		return "Your unique transaction reference number is :"+  UUID.randomUUID();
 	}
 	
 	
