@@ -16,6 +16,7 @@ public class PaymentDescriptor {
 	    {
 	        this.id = id;
 	    }
+	    
 
 	    public String getPaymentDescriptorType ()
 	    {
