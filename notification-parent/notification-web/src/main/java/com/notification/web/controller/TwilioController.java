@@ -9,21 +9,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.twilio.sdk.TwilioRestException;
 
 @Controller
-public class TwilioController {
+public class TwilioController
+{
 
-
-		@RequestMapping(value="/sendSms/{toNumber}/{bodyMessage}",method = RequestMethod.POST)
-		@ResponseBody
-		public String sendSms (@PathVariable("toNumber") String toNumber, @PathVariable("bodyMessage") String bodyMessage){
+	@RequestMapping(value = "/sendSms/{toNumber}/{bodyMessage}", method = RequestMethod.POST)
+	@ResponseBody
+	public String sendSms(@PathVariable("toNumber") String toNumber, @PathVariable("bodyMessage") String bodyMessage)
+	{
 		String response = "Message sent to " + toNumber;
-		try {
-			new SmsSender().sendMessage(toNumber,bodyMessage);
-		} catch (TwilioRestException e) {
+		try
+		{
+			new SmsSender().sendMessage(toNumber, bodyMessage);
+		}
+		catch(TwilioRestException e)
+		{
 			e.printStackTrace();
 			response = "Unable to sent sms to " + toNumber;
 		}
 		return response;
-		} 
+	} 
 		
 		@RequestMapping(value = "/otp/{emailId}/{flag}", method = RequestMethod.GET)
 		@ResponseBody
@@ -36,6 +40,5 @@ public class TwilioController {
 			return otpBuilder.toString();
 
 		}
-	
 
 }
