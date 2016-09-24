@@ -3,6 +3,7 @@ package com.notification.web.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,12 +21,12 @@ public class CustomerController {
 	@Autowired
 	BankService bankService;
 	
-	@RequestMapping(value="/offers",method = RequestMethod.GET)
+	@RequestMapping(value="/offers/{custEmailId}",method = RequestMethod.GET)
 	@ResponseBody
-	public String getCustomerOfferList (){
+	public String getCustomerOfferList (@PathVariable("custEmailId") String custEmailId){
 	
-
-    	List<Offer> bankOffers = bankService.findAllOffers();
+		// find by email id
+    	List<Offer> bankOffers = bankService.findAllOffersByEmailId(custEmailId);
        
         return MessageHelper.toJsonString(bankOffers);
    

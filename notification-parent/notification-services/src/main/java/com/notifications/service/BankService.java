@@ -43,7 +43,7 @@ public class BankService {
 		return bankDetails;
 	}
 
-	public List<Offer> findAllOffers() {
+	public List<Offer> findAllOffersByEmailId(String emailId) {
 		
 		List<Offer> offerList = new ArrayList<Offer>();
 		

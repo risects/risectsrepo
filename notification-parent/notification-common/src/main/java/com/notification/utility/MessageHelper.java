@@ -31,10 +31,13 @@ public class MessageHelper {
 			mapper = mapper.registerModule(module);
 
 			Writer strWriter = new StringWriter();
-			mapper.writeValue(strWriter, input);
+			mapper.writerWithDefaultPrettyPrinter().writeValue(strWriter, input);
+			//mapper.writeValue(strWriter, input);
+
 			userDataJSON = strWriter.toString();
 			} catch (Exception jme) {
 		}
+		
 		return userDataJSON;
 	}
 
