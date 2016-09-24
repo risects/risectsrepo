@@ -21,11 +21,11 @@ public class BarclaysServiceImpl implements IBarclaysService {
 	}
 
 	public String getMerchantsList() {
-		return new RestClientCaller().callRestUrl(GET_TRANSACTIONS);
+		return new RestClientCaller().callRestUrl(GET_MERCHANTS);
 	}
 
 	public String getTransactions() {
-		return new RestClientCaller().callRestUrl(GET_MERCHANTS);
+		return new RestClientCaller().callRestUrl(GET_TRANSACTIONS);
 	}
 
 	
