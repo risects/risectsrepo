@@ -7,6 +7,9 @@
         <dependent-module archiveName="notification-services-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/notification-services/notification-services">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="notification-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/notification-common/notification-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="notification-web"/>
         <property name="java-output-path" value="/notification-web/target/classes"/>
     </wb-module>

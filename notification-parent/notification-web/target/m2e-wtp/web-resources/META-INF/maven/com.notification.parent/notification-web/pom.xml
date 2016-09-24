@@ -25,6 +25,13 @@
     <artifactId>notification-services</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     </dependency>
+     <dependency>
+    <groupId>com.notification.parent</groupId>
+     <artifactId>notification-common</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+  
   </dependencies>
   <build>
     <finalName>notification-web</finalName>
