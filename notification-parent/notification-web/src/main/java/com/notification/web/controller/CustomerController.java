@@ -21,7 +21,7 @@ public class CustomerController {
 	@Autowired
 	BankService bankService;
 	
-	@RequestMapping(value="/offers/{custEmailId}",method = RequestMethod.GET)
+	@RequestMapping(value="/offers/{custEmailId}/service",method = RequestMethod.GET)
 	@ResponseBody
 	public String getCustomerOfferList (@PathVariable("custEmailId") String custEmailId){
 	

@@ -5,6 +5,7 @@ public class Offer {
 	String description;
 	String couponCode;
 	String offeredBy;
+	String rank;
 
 	public String getDescription() {
 		return description;
@@ -29,5 +30,14 @@ public class Offer {
 	public void setOfferedBy(String offeredBy) {
 		this.offeredBy = offeredBy;
 	}
+
+	public String getRank() {
+		return rank;
+	}
+
+	public void setRank(String rank) {
+		this.rank = rank;
+	}
+	
 
 }

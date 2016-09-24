@@ -12,6 +12,7 @@ public class BankDetail implements Serializable {
 	private String bankSortCode;
 	private String accountType;
 	private boolean active;
+	private String accountNum;
 	
 	
 	public String getBankName() {
@@ -37,6 +38,12 @@ public class BankDetail implements Serializable {
 	}
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+	public String getAccountNum() {
+		return accountNum;
+	}
+	public void setAccountNum(String accountNum) {
+		this.accountNum = accountNum;
 	}
 	
 	
