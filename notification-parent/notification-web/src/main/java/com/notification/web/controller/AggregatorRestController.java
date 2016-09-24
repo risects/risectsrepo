@@ -18,11 +18,9 @@ import com.notifications.service.BankService;
 public class AggregatorRestController {
 	
 	@Autowired
-	BankService bankService;  //Service which will do all data retrieval/manipulation work
- 
-    //-------------------Retrieve All Bank details of given user--------------------------------------------------------
+	BankService bankService;
      
-    @RequestMapping(value="/BankDetails" ,method = RequestMethod.GET)
+    @RequestMapping(value="/accounts" ,method = RequestMethod.GET)
     @ResponseBody
     public String listAllBanks() {
     	String response = null;
@@ -36,6 +34,6 @@ public class AggregatorRestController {
         //return new ResponseEntity<List<BankDetail>>(banks, HttpStatus.OK);
     }
    
- 
+  
  
 }

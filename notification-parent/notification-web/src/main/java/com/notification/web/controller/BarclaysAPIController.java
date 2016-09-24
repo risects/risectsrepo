@@ -15,20 +15,20 @@ public class BarclaysAPIController {
 	@Autowired
 	private IBarclaysService barclaysAPI;
 	
-	@RequestMapping(value="/Customers",method = RequestMethod.GET)
+	@RequestMapping(value="/customers",method = RequestMethod.GET)
 	@ResponseBody
 	public String getCustomerList (){
 	
 	return barclaysAPI.getCustomersList();
 	}
 	
-	@RequestMapping(value="/Merchants",method = RequestMethod.GET)
+	@RequestMapping(value="/merchants",method = RequestMethod.GET)
 	@ResponseBody
 	public String getMerchantsList() {
 		return barclaysAPI.getMerchantsList();
 	}
 	
-	@RequestMapping(value="/Transactions",method = RequestMethod.GET)
+	@RequestMapping(value="/transactions",method = RequestMethod.GET)
 	@ResponseBody
 	public String getTransactions() {
 		return barclaysAPI.getTransactions();
