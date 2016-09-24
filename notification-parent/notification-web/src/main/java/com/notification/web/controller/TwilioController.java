@@ -24,6 +24,18 @@ public class TwilioController {
 		}
 		return response;
 		} 
+		
+		@RequestMapping(value = "/otp/{emailId}/{flag}", method = RequestMethod.GET)
+		@ResponseBody
+		public String getOTP(@PathVariable("emailId") String emailId, @PathVariable("flag") String flag)
+		{
+			int randomPIN = (int) (Math.random() * 9000) + 1000;
+			StringBuilder otpBuilder = new StringBuilder(flag);
+			otpBuilder.append(randomPIN);
+			otpBuilder.append(flag);
+			return otpBuilder.toString();
+
+		}
 	
 
 }
