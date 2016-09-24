@@ -12,7 +12,7 @@ import com.twilio.sdk.TwilioRestException;
 public class TwilioController
 {
 
-	@RequestMapping(value = "/sendSms/{toNumber}/{bodyMessage}", method = RequestMethod.POST)
+	@RequestMapping(value = "/sms/{toNumber}/{bodyMessage}", method = RequestMethod.GET)
 	@ResponseBody
 	public String sendSms(@PathVariable("toNumber") String toNumber, @PathVariable("bodyMessage") String bodyMessage)
 	{

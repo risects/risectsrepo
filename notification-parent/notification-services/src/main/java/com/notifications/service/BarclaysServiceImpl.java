@@ -1,7 +1,10 @@
 package com.notifications.service;
 
+import java.io.InputStream;
+
 import org.springframework.stereotype.Service;
 
+import com.notification.utility.FileUtility;
 import com.notification.utility.RestClientCaller;
 
 
@@ -25,9 +28,12 @@ public class BarclaysServiceImpl implements IBarclaysService {
 	}
 
 	public String getTransactions() {
-		return new RestClientCaller().callRestUrl(GET_TRANSACTIONS);
+		String response = null;
+		
+		// response = new RestClientCaller().callRestUrl(GET_TRANSACTIONS);
+		InputStream in = this.getClass().getResourceAsStream("/transactions.json");
+		response = new FileUtility().getStringFromInputStream(in);
+		return response;
 	}
-
 	
-
 }

@@ -1,0 +1,133 @@
+[{
+	"tags": ["RETAIL"],
+	"amount": {
+		"direction": "OUT",
+		"value": "10.00"
+	},
+	"description": "From account number8573315966758940",
+	"accountType": "Saving",
+	"email": "hackathonrise@gmail.com",
+	"paymentDescriptor": {
+		"id": "9701229312305196",
+		"paymentDescriptorType": "INDIVIDUAL"
+	},
+	"notes": "null",
+	"paymentMethod": "CARD",
+	"metadata": [{
+		"value": "https://upload.wikimedia.org/wikipedia/common",
+		"key": "RECEIPT"
+	}],
+	"transactionDate": "2016-05-04",
+	"transactionType": "FOOD",
+	"bankName": "Barclays"
+}, {
+	"tags": ["RETAIL"],
+	"amount": {
+		"direction": "OUT",
+		"value": "20.00"
+	},
+	"description": "From account number8573325966758940",
+	"accountType": "Saving",
+	"email": "rise.cts@gmail.com",
+	"paymentDescriptor": {
+		"id": "9702229322305296",
+		"paymentDescriptorType": "INDIVIDUAL"
+	},
+	"notes": "null",
+	"paymentMethod": "CARD",
+	"metadata": [{
+		"value": "https://upload.wikimedia.org/wikipedia/common",
+		"key": "RECEIPT"
+	}],
+	"transactionDate": "2026-03-01",
+	"transactionType": "FOOD",
+	"bankName": "Barclays"
+}, {
+	"tags": ["RETAIL"],
+	"amount": {
+		"direction": "OUT",
+		"value": "99.00"
+	},
+	"description": "From account number8573325966758940",
+	"accountType": "Saving",
+	"email": "rise.cts@gmail.com",
+	"paymentDescriptor": {
+		"id": "9702229322305296",
+		"paymentDescriptorType": "INDIVIDUAL"
+	},
+	"notes": "null",
+	"paymentMethod": "CARD",
+	"metadata": [{
+		"value": "https://upload.wikimedia.org/wikipedia/common",
+		"key": "RECEIPT"
+	}],
+	"transactionDate": "2026-03-01",
+	"transactionType": "MOVIES",
+	"bankName": "Barclays"
+}, {
+	"tags": ["RETAIL"],
+	"amount": {
+		"direction": "OUT",
+		"value": "80.00"
+	},
+	"description": "From account number8573325966758940",
+	"accountType": "Saving",
+	"email": "rise.cts@gmail.com",
+	"paymentDescriptor": {
+		"id": "9702229322305296",
+		"paymentDescriptorType": "INDIVIDUAL"
+	},
+	"notes": "null",
+	"paymentMethod": "CARD",
+	"metadata": [{
+		"value": "https://upload.wikimedia.org/wikipedia/common",
+		"key": "RECEIPT"
+	}],
+	"transactionDate": "2026-03-01",
+	"transactionType": "ENTERTAINMENT",
+	"bankName": "Barclays"
+}, {
+	"tags": ["RETAIL"],
+	"amount": {
+		"direction": "OUT",
+		"value": "20.00"
+	},
+	"description": "From account number8573325966758940",
+	"accountType": "Saving",
+	"email": "tushar.gurde@gmail.com",
+	"paymentDescriptor": {
+		"id": "9702229322305296",
+		"paymentDescriptorType": "INDIVIDUAL"
+	},
+	"notes": "null",
+	"paymentMethod": "CARD",
+	"metadata": [{
+		"value": "https://upload.wikimedia.org/wikipedia/common",
+		"key": "RECEIPT"
+	}],
+	"transactionDate": "2026-03-01",
+	"transactionType": "FOOD",
+	"bankName": "Barclays"
+}, {
+	"tags": ["RETAIL"],
+	"amount": {
+		"direction": "OUT",
+		"value": "238.00"
+	},
+	"description": "From account number8573325966758940",
+	"accountType": "Saving",
+	"email": "rahulsri.dhn@gmail.com",
+	"paymentDescriptor": {
+		"id": "9702229322305296",
+		"paymentDescriptorType": "INDIVIDUAL"
+	},
+	"notes": "null",
+	"paymentMethod": "CARD",
+	"metadata": [{
+		"value": "https://upload.wikimedia.org/wikipedia/common",
+		"key": "RECEIPT"
+	}],
+	"transactionDate": "2026-03-01",
+	"transactionType": "ELECTRONICS",
+	"bankName": "Barclays"
+}]

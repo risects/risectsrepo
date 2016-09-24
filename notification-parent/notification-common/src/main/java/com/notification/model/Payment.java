@@ -8,6 +8,10 @@ package com.notification.model;
 		    private Amount amount;
 
 		    private String description;
+		    
+		    private String accountType;
+		    
+		    private String email;
 
 		    private PaymentDescriptor paymentDescriptor;
 
@@ -16,7 +20,22 @@ package com.notification.model;
 		    private String paymentMethod;
 
 		    private Metadata[] metadata;
+		    
+		    private String transactionDate;
+		    
+		    private String transactionType;
+		    
+		    public String getTransactionType() {
+				return transactionType;
+			}
 
+			public void setTransactionType(String transactionType) {
+				this.transactionType = transactionType;
+			}
+
+			private String bankName;
+		    
+		    //yyyy-mm-dd
 		    public String[] getTags ()
 		    {
 		        return tags;
@@ -67,7 +86,31 @@ package com.notification.model;
 		        this.notes = notes;
 		    }
 
-		    public String getPaymentMethod ()
+		    public String getAccountType() {
+				return accountType;
+			}
+
+			public void setAccountType(String accountType) {
+				this.accountType = accountType;
+			}
+
+			public String getTransactionDate() {
+				return transactionDate;
+			}
+
+			public void setTransactionDate(String transactionDate) {
+				this.transactionDate = transactionDate;
+			}
+
+			public String getBankName() {
+				return bankName;
+			}
+
+			public void setBankName(String bankName) {
+				this.bankName = bankName;
+			}
+
+			public String getPaymentMethod ()
 		    {
 		        return paymentMethod;
 		    }
@@ -87,8 +130,12 @@ package com.notification.model;
 		        this.metadata = metadata;
 		    }
 
-		    
-		
-	
+			public String getEmail() {
+				return email;
+			}
+
+			public void setEmail(String email) {
+				this.email = email;
+			}
 
 }
