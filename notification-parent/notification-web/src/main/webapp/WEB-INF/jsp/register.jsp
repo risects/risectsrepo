@@ -479,9 +479,8 @@ $(".submit").click(function(){
 		var otpL = 'OTP for linking LLoyds account with fuPay is '+'RL'+randomNoL+'RL';
 		$.ajax({
 			  async:false,
-			  type: "POST",
-			// url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpL
-			  url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+919552277877/"+otpL
+			 url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpL
+			//  url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+919552277877/"+otpL
 			});
 		
 	}else if(selectedValues[0] == 'Barclays'){
@@ -491,9 +490,8 @@ $(".submit").click(function(){
 		var otpB = 'OTP for linking Barclays account with fuPay is '+'RB'+randomNo+'RB';
 		$.ajax({
 			  async:false,
-			  type: "POST",
-			  url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+919552277877/"+otpB
-			// url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpB
+			//  url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+919552277877/"+otpB
+			 url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpB
 			});
 	}else if(selectedValues[0] == 'LLoyds'){
 		$("#otpId").attr('style','display:none;');
@@ -502,9 +500,8 @@ $(".submit").click(function(){
 		var otpL = 'OTP for linking LLoyds account with fuPay is ' + 'RL'+randomNoL+'RL';
 		$.ajax({
 			  async:false,
-			  type: "POST",
-			  url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+917709010210/"+otpL
-			// url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpL
+			//  url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+917709010210/"+otpL
+			 url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpL
 			});
 	}
 	return false;
@@ -565,8 +562,8 @@ $('.accountDetails').click(function(){
 	
 	$.ajax({
 		async:false,
-       url: "http://localhost:8080/2016267jOh-notification-web/Customers"
-      //url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/customers"
+      // url: "http://localhost:8080/2016267jOh-notification-web/Customers"
+      url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/customers"
     }).then(function(data) {
     	console.log(data);
     	
@@ -625,7 +622,7 @@ $(".getOffers").click(function(){
 <div class="header"><div style="margin:auto;padding:15px;"><div style="margin:auto;padding:15px; background:url('resources/assets/img/money-logo.png') no-repeat;background-size:47px;">&nbsp;</div></div></div>
 <div class="formClass">
 <!-- multistep form -->
-<form id="msform" method="post" action="aggregator/saveAccDetails">
+<form id="msform" method="post" action="saveAccDetails">
 	<!-- progressbar -->
 	<ul id="progressbar">
 		<li class="active">Account Setup with Social Profiles</li>

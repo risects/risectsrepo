@@ -117,7 +117,7 @@ body {
 	color: white;
 	text-transform: uppercase;
 	font-size: 9px;
-	width: 19.33%;
+	width: 16.33%;
 	float: left;
 	position: relative;
 }
@@ -179,7 +179,7 @@ $("document").ready(function(){
 <form id="msform" method="post" action="aggregator/saveAccDetails">
 	<!-- progressbar -->
 	<ul id="progressbar">
-		<li class="active">Account Setup with Social Profiles</li>
+		<li class="active">Account Setup</li>
 		<li class="active">Personal Details</li>
 		<li class="active">Select Banks</li>
 		<li class="active">One Time Password</li>
