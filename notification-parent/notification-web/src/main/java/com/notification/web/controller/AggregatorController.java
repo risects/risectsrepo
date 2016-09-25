@@ -122,6 +122,12 @@ public class AggregatorController {
         ModelAndView model = new ModelAndView("transactionDetails");
         return model;
     }
+    
+    @RequestMapping(value = "/getOffers", method = RequestMethod.POST)
+    public ModelAndView getOffers(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView model = new ModelAndView("generateOffers");
+        return model;
+    }
 
     private boolean isValidUser(String username, String password) {
         // TODO Auto-generated method stub

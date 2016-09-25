@@ -603,17 +603,6 @@ $('.accountDetails').click(function(){
     });
 });
 
-$(".getOffers").click(function(){
-	console.log("getOffers clicked");
-	$.ajax({
-	        async:false,
-		url: "http://localhost:8080/20162689ke-notification-web/customers/offers/rahulsri.dhn@gmail.com/service"
-		
-	    }).then(function(data) {
-		console.log(data);
-	});
-
-	});
 });
 </script>
 

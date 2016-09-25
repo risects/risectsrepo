@@ -292,21 +292,9 @@ $(".previous").click(function(){
 
 $(".submit").click(function(){
 	return false;
-})
-
-$(".getOffers").click(function(){
-console.log("getOffers clicked");
-$.ajax({
-        async:false,
-		url: "http://localhost:8080/20162689ke-notification-web/customers/offers/rahulsri.dhn@gmail.com/service"
-	
-    }).then(function(data) {
-	console.log(data);
+});
 });
 
-});
-
-});
 </script>
 
 </HEAD>
@@ -314,7 +302,7 @@ $.ajax({
 <div class="header"><div style="margin:auto;padding:15px;"><div style="margin:auto;padding:15px; background:url('resources/assets/img/money-logo.png') no-repeat;background-size:47px;">&nbsp;</div></div></div>
 <div class="formClass">
 <!-- multistep form -->
-<form id="msform">
+<form id="msform" action="getOffers" method="POST">
 	<!-- progressbar -->
 	<ul id="progressbar" style="display: none;">
 		<li class="active">Account Setup</li>
@@ -339,8 +327,6 @@ $.ajax({
 				<th>Direction</th>
 				<th>Account Type</th>
 				<th>Bank</th>
-				
-				
 			</tr>
 			<tr>
 			    <td>
@@ -481,120 +467,10 @@ $.ajax({
 			    </td>
 			</tr>
 			<tr>
-				<td><input type="button" name="getOffers" class="getOffers action-button" value="Generate offers" /></td>
+				<td><input type="submit" name="getOffers" class="getOffers action-button" value="Generate offers" /></td>
 			</tr>
 		</table>
 		</div>
-		
-		<!-- <input class="toggle-box" id="customer2" type="checkbox" style="display: none;">
-		<label for="customer2">Mark Ben</label>
-		<div><table >
-			<tr>
-				<th>Transaction date</th>
-				<th>Amount</th>
-				<th>Transaction type</th>
-				<th>Merchant Name</th>
-				<th>Direction</th>
-				<th>Account Type</th>
-				<th>Bank</th>
-				
-				
-			</tr>
-			<tr>
-			    <td>
-				2016-07-22
-			    </td>
-			    <td>
-				$320
-			    </td>
-			    <td>
-				Fender Acoustic Guitar
-			    </td>
-			    <td>
-				MERCHANT
-			    </td>
-			    <td>
-				Out
-			    </td>
-			     <td>
-				Savings
-			    </td>
-			    <td>
-				Barclays
-			    </td>
-			</tr>
-			<tr>
-				<td><input type="submit" name="submit" class="submit action-button" value="Generate offers" /></td>
-			</tr>
-			</table>
-			</div>
-		
-		<input class="toggle-box" id="customer3" type="checkbox" style="display: none;">
-		<label for="customer3">Steve Mark</label>
-		<div><table >
-			<tr>
-				<th>Transaction date</th>
-				<th>Amount</th>
-				<th>Transaction type</th>
-				<th>Merchant Name</th>
-				<th>Direction</th>
-				<th>Account Type</th>
-				<th>Bank</th>
-				
-				
-			</tr>
-			<tr>
-			    <td>
-				2016-07-22
-			    </td>
-			    <td>
-				£320
-			    </td>
-			    <td>
-				Fender Acoustic Guitar
-			    </td>
-			    <td>
-				MERCHANT
-			    </td>
-			    <td>
-				Out
-			    </td>
-			     <td>
-				Credit
-			    </td>
-			    <td>
-				Barclays
-			    </td>
-			</tr>
-			<tr>
-			    <td>
-				2016-07-22
-			    </td>
-			    <td>
-				£320
-			    </td>
-			    <td>
-				Fender Acoustic Guitar
-			    </td>
-			    <td>
-				MERCHANT
-			    </td>
-			    <td>
-				Out
-			    </td>
-			     <td>
-				Savings
-			    </td>
-			    <td>
-				Lloyds
-			    </td>
-			</tr>
-			<tr>
-				<td><input type="submit" name="submit" class="submit action-button" value="Generate offers" /></td>
-			</tr>
-			</table>
-			</div> -->
-		
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 	</form>
