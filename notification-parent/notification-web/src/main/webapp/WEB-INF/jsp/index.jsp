@@ -223,6 +223,33 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+.container {
+  background: white;
+    width: 250px;
+    border-radius: 2px;
+}
+
+.adminLogin {
+  float: left;
+    height: 50px;
+    width: 207px;
+    border: 1px solid green;
+    background: lightgreen;
+    margin: 2px;
+    border-radius: 2px;
+}
+
+.customerLogin {
+  float: left;
+    height: 50px;
+    width: 204px;
+    border: 1px solid blue;
+    background: lightblue;
+    margin: 4px;
+    border-radius: 2px;
+}
+
 <!-- End Table CSS -->
 </style>
         
@@ -243,8 +270,14 @@ tr:nth-child(even) {
 	<!-- fieldsets -->
 	<fieldset>
 		<h2 class="fs-title">fuPAY Dashboard</h2>
-		<a href="/aggregator/adminLogin">Administrator Login</a> ||
-		<a href="/aggregator/registerUser">Customer Registration</a>
+		<div class="container">
+			<div class="adminLogin">
+			<a href="/aggregator/adminLogin" style="color: black;">Administrator Login</a>
+			</div>
+			<div class="customerLogin">
+			<a href="/aggregator/registerUser" style="color: black;">Customer Registration</a>
+			</div>
+		</div>
 	</fieldset>	
 	</form>
 	</div>

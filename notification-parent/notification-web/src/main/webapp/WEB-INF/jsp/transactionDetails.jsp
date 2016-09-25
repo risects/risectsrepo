@@ -471,7 +471,7 @@ $(".submit").click(function(){
 			</tr>
 		</table>
 		</div>
-		<input type="button" name="next" class="next action-button" value="Next" />
+		<a href="/aggregator/" class="action-button">Go to Home Page</a>
 	</fieldset>
 	</form>
 	</div>
