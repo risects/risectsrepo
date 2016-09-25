@@ -26,7 +26,7 @@ html {
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 20px 30px;
     box-sizing: border-box;
-    width: 152%;
+    width: 160%;
     margin: 0 10%;
     position: absolute;
 }
@@ -575,30 +575,30 @@ $('.accountDetails').click(function(){
     	console.log(obj1[0].accountList.length);
     	var accountList = obj1[0].accountList;
     	/* $.each(accountList, function(key,value) { */
-    		if(selectedValues[0] == 'Barclays' && selectedValues[1] == 'LLoyds'){
-    			console.log('BL');
-    			$('#accountDetailsTable').append('<table style="width:100%" border="1"><tr><th></th><th>Account Nick Name</th><th>Customer Id</th><th>Account Type</th><th>Account Number</th></tr><tr>');
-    			var table = $('#accountDetailsTable').children();
-    			table.append('<td><input type="checkbox" name="bankChk" value="BarclaysAccount1"/><input type="hidden" name="bankValuesForBar1" value="John salary account,8384692676372222,CURRENT_ACCOUNT,****1258"/></td><td>John salary account</td><td>8384692676375758</td><td>CURRENT_ACCOUNT</td><td>****1258</td></tr>');
-    			table.append('<tr><td><input type="checkbox" name="bankChk" value="BarclaysAccount2"/><input type="hidden" name="bankValuesForBar2" value="John holiday savings,8384692676375758,SAVINGS_ACCOUNT,****8122"/></td><td>John holiday savings</td><td>8384692676375758</td><td>SAVINGS_ACCOUNT</td><td>****8122</td></tr>');
-    			table.append('<tr><td><input type="checkbox" name="bankChk" value="LLoydsAccount"/><input type="hidden" name="bankValuesForLLoyds" value="John salary account,8384692676375758,CURRENT_ACCOUNT,****1258"/></td><td>John credit card</td><td>8384692676375758</td><td>CREDIT_CARD_ACCOUNT</td><td>************9999</td></tr></table>');
-    		}else if(selectedValues[0] == 'Barclays'){
-    			console.log('B');
-    			$('#accountDetailsTable').append('<table style="width:100%" border="1"><tr><th></th><th>Account Nick Name</th><th>Customer Id</th><th>Account Type</th><th>Account Number</th></tr><tr>');
-    			var table = $('#accountDetailsTable').children();
-    			if(customerType == 'Merchant'){
-    				table.append('<td><input type="checkbox" name="bankChk" value="BarclaysAccount1"/><input type="hidden" name="bankValuesForBar1" value="John salary account,8384692676372222,CURRENT_ACCOUNT,****1258"/></td><td>John salary account</td><td>8384692676375758</td><td>CURRENT_ACCOUNT</td><td>****1258</td></tr></table>');
-    			}else if(customerType == 'Customer'){
-    				table.append('<td><input type="checkbox" name="bankChk" value="BarclaysAccount1"/><input type="hidden" name="bankValuesForBar1" value="John salary account,8384692676372222,CURRENT_ACCOUNT,****1258"/></td><td>John salary account</td><td>8384692676375758</td><td>CURRENT_ACCOUNT</td><td>****1258</td></tr>');
-        			table.append('<tr><td><input type="checkbox" name="bankChk" value="BarclaysAccount2"/><input type="hidden" name="bankValuesForBar2" value="John holiday savings,8384692676375758,SAVINGS_ACCOUNT,****8122"/></td><td>John holiday savings</td><td>8384692676375758</td><td>SAVINGS_ACCOUNT</td><td>****8122</td></tr></table>');
-    			}
-    		}else if(selectedValues[0] == 'LLoyds'){
-    			console.log('L');
-    			$('#accountDetailsTable').append('<table style="width:100%" border="1"><tr><th></th><th>Account Nick Name</th><th>Customer Id</th><th>Account Type</th><th>Account Number</th></tr><tr>');
-    			var table = $('#accountDetailsTable').children();
-    			table.append('<td><input type="checkbox" name="bankChk" value="LLoydsAccount"/><input type="hidden" name="bankValuesForLLoyds" value="John salary account,8384692676375758,CURRENT_ACCOUNT,****1258"/></td><td>John salary account</td><td>8384692676375758</td><td>CURRENT_ACCOUNT</td><td>****1258</td></tr></table>');
-    			
-    		}
+    	if(selectedValues[0] == 'Barclays' && selectedValues[1] == 'LLoyds'){
+			console.log('BL');
+			$('#accountDetailsTable').append('<table style="width:100%" border="1"><tr><th></th><th>Bank Name</th><th>Account Nick Name</th><th>Customer Id</th><th>Account Type</th><th>Account Number</th></tr><tr>');
+			var table = $('#accountDetailsTable').children();
+			table.append('<td><input type="checkbox" name="bankChk" value="BarclaysAccount1"/><input type="hidden" name="bankValuesForBar1" value="John salary account,8384692676372222,CURRENT_ACCOUNT,****1258"/></td><td>Barclays</td><td>John salary account</td><td>8384692676375758</td><td>CURRENT_ACCOUNT</td><td>****1258</td></tr>');
+			table.append('<tr><td><input type="checkbox" name="bankChk" value="BarclaysAccount2"/><input type="hidden" name="bankValuesForBar2" value="John holiday savings,8384692676375758,SAVINGS_ACCOUNT,****8122"/></td><td>Barclays</td><td>John holiday savings</td><td>8384692676375758</td><td>SAVINGS_ACCOUNT</td><td>****8122</td></tr>');
+			table.append('<tr><td><input type="checkbox" name="bankChk" value="LLoydsAccount"/><input type="hidden" name="bankValuesForLLoyds" value="John salary account,8384692676375758,CURRENT_ACCOUNT,****1258"/></td><td>LLoyds</td><td>John credit card</td><td>8384692676375758</td><td>CREDIT_CARD_ACCOUNT</td><td>************9999</td></tr></table>');
+		}else if(selectedValues[0] == 'Barclays'){
+			console.log('B');
+			$('#accountDetailsTable').append('<table style="width:100%" border="1"><tr><th></th><th>Bank Name</th><th>Account Nick Name</th><th>Customer Id</th><th>Account Type</th><th>Account Number</th></tr><tr>');
+			var table = $('#accountDetailsTable').children();
+			if(customerType == 'Merchant'){
+				table.append('<td><input type="checkbox" name="bankChk" value="BarclaysAccount1"/><input type="hidden" name="bankValuesForBar1" value="John salary account,8384692676372222,CURRENT_ACCOUNT,****1258"/></td><td>Barclays</td><td>John salary account</td><td>8384692676375758</td><td>CURRENT_ACCOUNT</td><td>****1258</td></tr></table>');
+			}else if(customerType == 'Customer'){
+				table.append('<td><input type="checkbox" name="bankChk" value="BarclaysAccount1"/><input type="hidden" name="bankValuesForBar1" value="John salary account,8384692676372222,CURRENT_ACCOUNT,****1258"/></td><td>Barclays</td><td>John salary account</td><td>8384692676375758</td><td>CURRENT_ACCOUNT</td><td>****1258</td></tr>');
+    			table.append('<tr><td><input type="checkbox" name="bankChk" value="BarclaysAccount2"/><input type="hidden" name="bankValuesForBar2" value="John holiday savings,8384692676375758,SAVINGS_ACCOUNT,****8122"/></td><td>LLoyds</td><td>John holiday savings</td><td>8384692676375758</td><td>SAVINGS_ACCOUNT</td><td>****8122</td></tr></table>');
+			}
+		}else if(selectedValues[0] == 'LLoyds'){
+			console.log('L');
+			$('#accountDetailsTable').append('<table style="width:100%" border="1"><tr><th></th><th>Bank Name</th><th>Account Nick Name</th><th>Customer Id</th><th>Account Type</th><th>Account Number</th></tr><tr>');
+			var table = $('#accountDetailsTable').children();
+			table.append('<td><input type="checkbox" name="bankChk" value="LLoydsAccount"/><input type="hidden" name="bankValuesForLLoyds" value="John salary account,8384692676375758,CURRENT_ACCOUNT,****1258"/></td><td>LLoyds</td><td>John salary account</td><td>8384692676375758</td><td>CURRENT_ACCOUNT</td><td>****1258</td></tr></table>');
+			
+		}
     	/* }); */ 
     });
 });
