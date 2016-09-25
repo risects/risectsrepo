@@ -54,7 +54,6 @@ body {
 	padding: 20px 30px;
 	
 	box-sizing: border-box;
-	width: 80%;
 	margin: 0 10%;
 	
 	/*stacking fieldsets above each other*/
