@@ -112,7 +112,7 @@ body {
 	color: white;
 	text-transform: uppercase;
 	font-size: 9px;
-	width: 19.33%;
+	width: 16.33%;
 	float: left;
 	position: relative;
 }
@@ -264,7 +264,7 @@ tr:nth-child(even) {
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1388902824688544', //'{your-app-id}',
+    appId      : '585824781618654', //'{your-app-id}',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page

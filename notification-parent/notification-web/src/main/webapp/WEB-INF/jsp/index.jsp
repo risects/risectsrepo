@@ -10,7 +10,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>fuPAY Dashboard</title>
+        <title>fuPAY</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -269,7 +269,7 @@ tr:nth-child(even) {
 	</ul>
 	<!-- fieldsets -->
 	<fieldset>
-		<h2 class="fs-title">fuPAY Dashboard</h2>
+		<h2 class="fs-title">fuPAY</h2>
 		<div class="container">
 			<div class="adminLogin">
 			<a href="/aggregator/adminLogin" style="color: black;">Administrator Login</a>
