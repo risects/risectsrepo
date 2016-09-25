@@ -309,7 +309,8 @@ console.log(data);
 			    </td>
 			</tr>
 		</table>
-		<a href="/Payment-Aggregator/aggregator/" class="action-button">Go to Home Page</a>
+		<a href="/aggregator/" class="action-button">Go to Home Page</a>
+		<a href="/aggregator/" class="action-button">Sign Out</a>
 	</fieldset>
 </form>
 </div>
