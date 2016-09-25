@@ -264,7 +264,7 @@ tr:nth-child(even) {
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '585824781618654',//'1388902824688544', //'{your-app-id}',
+    appId      : '1388902824688544', //'{your-app-id}',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -423,7 +423,6 @@ $(".submit").click(function(){
 	if(selectedValues == null){
 		selectedValues = [];
 	}
-	
 	var merchantBank = $('#bankNameForMerchantId').val();
 	console.log('merchantBank :: ' + merchantBank);
 	
@@ -431,6 +430,7 @@ $(".submit").click(function(){
 		selectedValues[0] = merchantBank;
 	}
 	
+	console.log('selectedValues[0] :: ' + selectedValues[0]);
 	if(animating) return false;
 	animating = true;
 	
@@ -468,20 +468,20 @@ $(".submit").click(function(){
 		$("#otpId").removeAttr('style','display:none;');
 		$("#otpIdL").removeAttr('style','display:none;');
 		var randomNo = Math.floor(1000 + Math.random() * 9000);
-		var otpB = 'OTP for linking Barclays account with fuPAY is '+'RB'+randomNo+'RB';
+		var otpB = 'OTP for linking Barclays account with fuPay is '+'RB'+randomNo+'RB';
 		$.ajax({
 			  async:false,
 			  //url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpB
-			  url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpB
+			  url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+919552277877/"+otpB
 			});
 		
 		var randomNoL = Math.floor(1000 + Math.random() * 9000);
-		var otpL = 'OTP for linking LLoyds account with fuPUY is '+'RL'+randomNoL+'RL';
+		var otpL = 'OTP for linking LLoyds account with fuPay is '+'RL'+randomNoL+'RL';
 		$.ajax({
 			  async:false,
-			 // type: "POST",
-			 url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpL
-			 // url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+917709010210/"+otpL
+			  type: "POST",
+			// url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpL
+			  url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+919552277877/"+otpL
 			});
 		
 	}else if(selectedValues[0] == 'Barclays'){
@@ -491,9 +491,9 @@ $(".submit").click(function(){
 		var otpB = 'OTP for linking Barclays account with fuPay is '+'RB'+randomNo+'RB';
 		$.ajax({
 			  async:false,
-			 // type: "POST",
-			 // url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+917709010210/"+otpB
-			 url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpB
+			  type: "POST",
+			  url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+919552277877/"+otpB
+			// url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpB
 			});
 	}else if(selectedValues[0] == 'LLoyds'){
 		$("#otpId").attr('style','display:none;');
@@ -502,9 +502,9 @@ $(".submit").click(function(){
 		var otpL = 'OTP for linking LLoyds account with fuPay is ' + 'RL'+randomNoL+'RL';
 		$.ajax({
 			  async:false,
-			 // type: "POST",
-			 // url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+917709010210/"+otpL
-			 url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpL
+			  type: "POST",
+			  url: "http://localhost:8080/2016267jOh-notification-web/sendSms/+917709010210/"+otpL
+			// url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/sms/+917709010210/"+otpL
 			});
 	}
 	return false;
@@ -565,8 +565,8 @@ $('.accountDetails').click(function(){
 	
 	$.ajax({
 		async:false,
-      //  url: "http://localhost:8080/2016267jOh-notification-web/Customers"
-      url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/customers"
+       url: "http://localhost:8080/2016267jOh-notification-web/Customers"
+      //url: "http://instantpayapi-env.us-west-2.elasticbeanstalk.com/customers"
     }).then(function(data) {
     	console.log(data);
     	
